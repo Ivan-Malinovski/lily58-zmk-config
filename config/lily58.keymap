@@ -91,9 +91,9 @@
 // |         |            |            |            |            |            | PSCRN      |            | INS        |            |            |            |            |         |
 //                                     |            | RAISE      |            |            |            | DEL        | LOWER      |            |
             bindings = <
-&kp LALT(F4) &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6                                 &kp F7       &kp F8       &kp F9       &kp F10      &kp F11      
-&trans       &trans       &kp C_PP     &trans       &trans       &trans                                 &trans       &kp UP       &trans       &kp PG_UP    &trans       &kp F12 
-&trans       &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans                                 &kp LEFT     &kp DOWN     &kp RIGHT    &kp PG_DN    &kp END      &none 
+&kp LALT(F4) &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                                 &kp F6       &kp F7       &kp F8       &kp F9                    &kp F10      &kp F11      
+&trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &kp UP       &trans       &kp PG_UP                 &trans       &kp F12 
+&trans       &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans                                 &kp LEFT     &kp DOWN     &kp RIGHT    &kp PG_DN                 &kp END      &none 
 &trans       &trans       &trans       &trans       &trans       &trans       &kp PSCRN    &trans       &kp INS      &trans       &trans       &kp LS(NON_US_BACKSLASH)  &trans       &studio_unlock 
                                        &trans       &mo 2        &trans       &trans       &trans       &kp DEL      &mo 1        &none  
 
