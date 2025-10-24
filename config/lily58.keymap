@@ -10,6 +10,57 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
 
+// --- Danish layout aliases (ZMK) ---
+// base
+#define DK_HALF GRAVE        // ½
+#define DK_PLUS MINUS        // +
+#define DK_ACUT EQUAL        // ´ (dead)
+#define DK_ARNG LBKT         // Å
+#define DK_DIAE RBKT         // ¨ (dead)
+#define DK_AE   SEMI         // Æ
+#define DK_OSTR SQT          // Ø
+#define DK_QUOT NON_US_HASH  // ' (ISO key, QMK KC_NUHS)
+#define DK_LABK NON_US_BACKSLASH // < (ISO key, QMK KC_NUBS)
+#define DK_COMM COMMA        // ,
+#define DK_DOT  DOT          // .
+#define DK_MINS FSLH         // -  (on DK layout this lives on the / scancode)
+
+// shifted (LS = Left Shift; works the same with RS)
+#define DK_SECT LS(GRAVE)    // §
+#define DK_EXLM LS(N1)       // !
+#define DK_DQUO LS(N2)       // "
+#define DK_HASH LS(N3)       // #
+#define DK_CURR LS(N4)       // ¤
+#define DK_PERC LS(N5)       // %
+#define DK_AMPR LS(N6)       // &
+#define DK_SLSH LS(N7)       // /
+#define DK_LPRN LS(N8)       // (
+#define DK_RPRN LS(N9)       // )
+#define DK_EQL  LS(N0)       // =
+#define DK_QUES LS(MINUS)    // ?
+#define DK_GRV  LS(EQUAL)    // ` (dead)
+#define DK_CIRC LS(RBKT)     // ^ (dead)
+#define DK_ASTR LS(NON_US_HASH)     // *
+#define DK_RABK LS(NON_US_BACKSLASH) // >
+#define DK_SCLN LS(COMMA)    // ;
+#define DK_COLN LS(DOT)      // :
+#define DK_UNDS LS(FSLH)     // _
+
+// AltGr (RA = Right Alt)
+#define DK_AT   RA(N2)                 // @
+#define DK_PND  RA(N3)                 // £
+#define DK_DLR  RA(N4)                 // $
+#define DK_EURO RA(N5)                 // €
+#define DK_LCBR RA(N7)                 // {
+#define DK_LBRC RA(N8)                 // [
+#define DK_RBRC RA(N9)                 // ]
+#define DK_RCBR RA(N0)                 // }
+#define DK_PIPE RA(EQUAL)              // |
+#define DK_TILD RA(RBKT)               // ~ (dead)
+#define DK_BSLS RA(NON_US_BACKSLASH)   // backslash
+#define DK_MICR RA(M)                  // µ
+
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -17,16 +68,16 @@
         default_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // | ESC     | 1          | 2          | 3          | 4          | 5          |                         | 6          | 7          | 8          | 9          | 0          | -       |
-// | `       | Q          | W          | E          | R          | T          |                         | Y          | U          | I          | O          | P          | =       |
-// | TAB     | A          | S          | D          | F          | G          |                         | H          | J          | K          | L          | ;          | '       |
+// | `       | Q          | W          | E          | R          | T          |                         | Y          | U          | I          | O          | P          | Å       |
+// | TAB     | A          | S          | D          | F          | G          |                         | H          | J          | K          | L          | Æ          | Ø       |
 // | CTRL    | Z          | X          | C          | V          | B          | "["        | "]"        | N          | M          | ,          | .          | /          | \       |
 //                                     | SHIFT      | GUI        | ALT        | SPACE      | ENTER      | BSPC       | LOWER      | SHIFT      |
             bindings = <
 &kp ESC      &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                                 &kp N6       &kp N7       &kp N8       &kp N9       &kp N0       &kp MINUS
-&kp GRAVE    &kp Q        &kp W        &kp E        &kp R        &kp T                                  &kp Y        &kp U        &kp I        &kp O        &kp P        &kp EQUAL
-&kp TAB      &kp A        &kp S        &kp D        &kp F        &kp G                                  &kp H        &kp J        &kp K        &kp L        &kp SEMI     &kp SQT
-&kp LCTRL    &kp Z        &kp X        &kp C        &kp V        &kp B        &kp LBKT     &kp RBKT     &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH     &kp BSLH
-                                       &kp LSHFT    &kp LGUI     &kp LALT     &kp SPACE    &kp RET      &kp BSPC     &mo 1        &kp RSHFT
+&kp TAB      &kp Q        &kp W        &kp E        &kp R        &kp T                                  &kp Y        &kp U        &kp I        &kp O        &kp P        &kp DK_ARNG
+&kp LSHIFT   &kp A        &kp S        &kp D        &kp F        &kp G                                  &kp H        &kp J        &kp K        &kp L        &kp DK_AE    &kp OSTR
+&kp LCTRL    &kp Z        &kp X        &kp C        &kp V        &kp B        &kp C_MUTE   &kp RBKT     &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH     &kp BSLH
+                                       &kp LALT     &kp LGUI     &mo 1        &kp SPACE    &kp RET      &mo 2        &kp RGUI     &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -34,17 +85,17 @@
 
         lower_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// | F1      | F2         | F3         | F4         | F5         | F6         |                         | F7         | F8         | F9         | F10        | F11        | F12     | 
-// |         |            | ^          |            |            |            |                         |            |            |            | PG_UP      |            |         |
+//           | F1         | F2         | F3         | F4         | F5         | F6                                   | F7         | F8         | F9         | F10        | F11     | 
+// |         |            | ^          |            |            |            |                         |            |            |            | PG_UP      |            | F12     | 
 // |         | <-         | v          | ->         |            |            |                         |            |            | HOME       | PG_DN      | END        |         |
 // |         |            |            |            |            |            | PSCRN      |            | INS        |            |            |            |            |         |
 //                                     |            | RAISE      |            |            |            | DEL        | LOWER      |            |
             bindings = <
-&kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6                                 &kp F7       &kp F8       &kp F9       &kp F10      &kp F11      &kp F12
-&none        &none        &kp UP       &none        &none        &none                                  &none        &none        &none        &kp PG_UP    &none        &none 
-&none        &kp LEFT     &kp DOWN     &kp RIGHT    &none        &none                                  &none        &none        &kp HOME     &kp PG_DN    &kp END      &none 
-&none        &none        &none        &none        &none        &none        &kp PSCRN    &none        &kp INS      &none        &none        &none        &none        &studio_unlock 
-                                       &none        &mo 2        &none        &none        &none        &kp DEL      &mo 1        &none  
+&KP LALT(F4) &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6                                 &kp F7       &kp F8       &kp F9       &kp F10      &kp F11      
+&trans       &trans       &kp C_PP     &trans       &trans       &trans                                 &trans       &kp UP       &trans       &kp PG_UP    &trans       &kp F12 
+&trans       &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans                                 &kp LEFT     &kp DOWN     &kp RIGHT    &kp PG_DN    &kp END      &none 
+&trans       &trans       &trans       &trans       &trans       &trans       &kp PSCRN    &trans       &kp INS      &trans       &trans       &kp DK_RABK  &trans       &studio_unlock 
+                                       &trans       &mo 2        &trans       &trans       &trans       &kp DEL      &mo 1        &none  
 
             >;
 
@@ -59,11 +110,11 @@
 // |         |            |            |            |            |            |            |            |            |            |            |            |            |         |
 //                                     |            | RAISE      |            |            |            |            | LOWER      |            |  
             bindings = <
-&bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                           &none        &none        &none        &none        &none        &none 
-&out OUT_BLE &out OUT_USB &none        &none        &none        &none                                  &none        &none        &none        &none        &none        &none 
-&none        &none        &none        &none        &none        &none                                  &none        &none        &none        &none        &none        &none 
-&none        &none        &none        &none        &none        &none        &none        &none        &none        &none        &none        &none        &none        &none 
-                                       &none        &mo 2        &none        &none        &none        &none        &mo 1        &none 
+&trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &none 
+&trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &none 
+&trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &none 
+&trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &none 
+                                       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &none
 
             >;
 
