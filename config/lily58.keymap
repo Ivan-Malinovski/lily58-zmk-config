@@ -110,7 +110,7 @@
 // |         |            |            |            |            |            |            |            |            |            |            |            |            |         |
 //                                     |            | RAISE      |            |            |            |            | LOWER      |            |  
             bindings = <
-&BOOTLOADER  &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &kp RA(EQUAL) 
+&bootloader  &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &kp RA(EQUAL) 
 &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &kp RA(N8)   &kp RA(N9)   &trans       &none 
 &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &kp RA(N7)   &kp RA(N0)   &trans       &none 
 &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &none 
