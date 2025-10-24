@@ -95,7 +95,7 @@
 &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &kp UP       &trans       &kp PG_UP                 &trans       &kp F12 
 &trans       &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans                                 &kp LEFT     &kp DOWN     &kp RIGHT    &kp PG_DN                 &kp END      &none 
 &trans       &trans       &trans       &trans       &trans       &trans       &kp PSCRN    &trans       &trans       &trans       &trans       &kp LS(NON_US_BACKSLASH)  &trans       &studio_unlock 
-                                       &trans       &trans       &trans       &trans       &del         &trans       &trans       &trans 
+                                       &trans       &trans       &trans       &trans       &kp del      &trans       &trans       &trans 
 
             >;
 
