@@ -110,10 +110,10 @@
 // |         |            |            |            |            |            |            |            |            |            |            |            |            |         |
 //                                     |            | RAISE      |            |            |            |            | LOWER      |            |  
             bindings = <
-&bootloader  &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &kp RA(EQUAL) 
-&trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &kp RA(N8)   &kp RA(N9)   &trans       &none 
-&trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &kp RA(N7)   &kp RA(N0)   &trans       &none 
-&trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &none 
+&bootloader  &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans                 &trans                         &trans                         &kp RA(EQUAL) 
+&trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &kp RA(N8)             &kp RA(N9)                     &trans                         &none 
+&trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &kp RA(N7)             &kp RA(N0)                     &trans                         &none 
+&trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &kp NON_US_BACKSLASH   &kp LS(NON_US_BACKSLASH)       &kp RA(NON_US_BACKSLASH)       &none 
                                        &trans       &trans       &trans       &trans       &trans       &trans       &trans       &none
 
             >;
