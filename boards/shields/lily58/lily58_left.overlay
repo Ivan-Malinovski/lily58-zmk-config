@@ -1,0 +1,11 @@
+/ {
+    /* EC11 on the LEFT half (Nice!Nano v2) */
+    left_ec11: encoder_left {
+        compatible = "alps,ec11";
+        /* Replace P0.xx with your pins. Keep pull-ups + active-low. */
+        a-gpios = <&gpio0 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+        b-gpios = <&gpio0 8 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+        steps = <4>;          /* typical for EC11 detent */
+        status = "okay";
+    };
+};
